@@ -1,0 +1,13 @@
+[Unit]
+Description=Acquisition
+After=network.target
+
+[Service]
+User=raspberry
+Group=raspberry
+WorkingDirectory=/home/raspberry/Documents/images
+ExecStart=/home/raspberry/asc/bin/python /home/raspberry/Documents/images/acquisition.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
